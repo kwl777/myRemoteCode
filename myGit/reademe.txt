@@ -5,4 +5,5 @@ start learn git
 
  my leader is a assole
 
- write in subdev
+ write in subdevgi
+ write in kwldev
