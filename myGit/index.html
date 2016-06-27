@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>童年的回忆</title>
+	<meta name="description" content="">
+	<script>!function(n){var e=n.document,t=e.documentElement,i=720,o=i/32,a="orientationchange"in n?"orientationchange":"resize",d=function(){var n=t.clientWidth||320,n=n>720?720:320>n?320:n;t.style.fontSize=n/o+"px"};e.addEventListener&&n.addEventListener(a,d,!1),d()}(window);</script>
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+	<style type="text/css">
+		.moring{
+			font-size: 12px;
+			letter-spacing: -2px;
+		}
+	</style>
+ </head>
+<body>
+	<div class="loadingMask">
+		<img src="http://pic7.qiyipic.com/common/20160530/zbs61-share.gif" alt="">
+		<p id="progressing"></p>
+	</div>
+
+
+	        <!--封面-->
+        	<div class="slide1mask slide1">
+        		<div id="time">
+        			<span class="hour"></span>
+        			<span class="dot">:</span>
+        			<span class="fen"></span>
+        			<p class="xxj">
+        				<span class="date"></span>
+        				<span class="day"></span>
+        			</p>
+        		</div>
+				<div class="middle"></div>
+				<div class="arrow"></div>
+        	</div>
+	     	<!--第二页-->
+	     	<div class="slide2">
+	     		
+	     		<div class="meslist">
+	     			<div class="msg" id="msg1">
+						<div class="circle"></div>
+	     				<div id="time2">
+	     				   
+			     			<span class="hour"></span>
+		        			<span class="dot">:</span>
+		        			<span class="fen"></span>
+			     		</div>
+	     			</div>
+	     			<div class="msg2"></div>
+					<div class="msg3"></div>
+					<div class="msg4"></div>
+	     		</div>
+	     		<div class="msgfooter"></div>
+	     	</div>
+	     	<!--第二页 END-->
+			<!--对话页-->
+			<div class="chat">
+				<div class="box_bd scroll-wrapper">
+					<canvas id="emoji" class="emoji-canvas" width="720" height="1500"></canvas>
+					<div class="scroll-content J_scrollContent">
+						<div class="chatContent" id="chatContent">
+						</div>
+					</div>
+				</div>
+				<div class="box_ft close">
+					<div class="input-wrapper">
+						<p class="J_noticeInput">点我挑选道具吧</p>
+						<img src="http://c1.mifile.cn/f/i/hd/2016051101/input-down.png" alt="">
+					</div>
+
+					<div class="choice-wrapper J_choiceWrapper">
+						<ul class="main-choice J_choice J_mainChoice" data-choice="0" style="display: none">
+							<li class="J_liNext li-3" data-target-dialog="1">
+								<a href="javascript:void(0);" >任意门</a>
+							</li>
+							<li class="J_liNext li-3" data-target-dialog="2" data-target-choice="0">
+								<a href="javascript:void(0);">时光机</a>
+							</li>
+							<li class="J_liNext li-3" data-target-dialog="3" data-target-choice="0">
+								<a href="javascript:void(0);">如意电话亭</a>
+							</li>
+						
+							<li class="J_liNext li-3" data-target-dialog="4" data-target-choice="0">
+								<a href="javascript:void(0);">记忆面包</a>
+							</li>
+							<li class="J_liNext li-3" data-target-dialog="5" data-target-choice="0">
+								<a href="javascript:void(0);">丘比特之箭</a>
+							</li>
+							<li class="J_liNext li-3" data-target-dialog="6" data-continue="false">
+								<a href="javascript:void(0);">催泪大彩蛋</a>
+							</li>
+						
+							
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+
+
+
+	
+<!--微信推入声音-->
+	<audio id="new-message" preload="preload">
+    	<source src="http://static.iqiyi.com/ext/common/new_msg.mp3" type="audio/mp3" >
+    </audio>
+
+    <audio id="message-push-music" preload="preload">
+    	<source src="http://static.iqiyi.com/ext/common/sent_msg.mp3" type="audio/mp3" >
+    </audio>
+	
+    <audio id="train-run-music" preload="preload">
+    	<source src="http://c1.mifile.cn/f/i/hd/2016051101/train-run.mp3" type="audio/mp3">
+    </audio>
+
+    	
+
+    	<div class="fullpage-overlay video-overlay J_videoOverlay" width="1" height="1">
+    		<div class="J_videoWrapper"></div>
+    		<span class="tips-close J_videoClose"></span>
+    	</div>
+
+    	<div class="fullpage-overlay gallery-overlay J_galleryOverlay" data-gallery="1">
+    		<div class="xm-slide J_gallerySlide">
+    			<div class="xm-slide-scroll">
+    				<figure>
+    					<img data-origin="http://pic3.qiyipic.com/common/20160531/tfddlam-big.jpg">
+    				</figure> 
+    				<figure>
+    					<img data-origin="http://pic1.qiyipic.com/common/20160531/dlam-big.jpg">
+    				</figure>
+    				<figure>
+    					<img data-origin="http://pic4.qiyipic.com/common/20160531/dlamdkd-big.jpg">
+    				</figure>
+    				<figure>
+    					<img data-origin="http://pic4.qiyipic.com/common/20160528/zbs61-qyqy.png">
+    				</figure>
+    				<figure>
+    					<img data-origin="http://pic7.qiyipic.com/common/20160528/zbs61-crazyAnimal.png">
+    				</figure>
+    				<figure>
+    					<img data-origin="http://pic7.qiyipic.com/common/20160531/dengcxb-big.jpg">
+    				</figure>
+    				<figure>
+    					<img data-origin="http://pic0.qiyipic.com/common/20160531/nnqc-big.jpg">
+    				</figure>
+    			</div>
+    		</div>
+    		<span class="tips-close J_galleryClose"></span>
+    	</div>
+    	<!--分享-->
+    	<div class="shareMask">
+    		<img src="http://pic7.qiyipic.com/common/20160530/zbs61-share.gif" alt="">
+    	</div>
+		  <script id="messageTpl" type="text/x-dot-template">
+		  	{{~it :message:index}}
+		  	<div class="clearfix">
+		  		{{? message.type == 'system'}}
+		  		<div class="message">
+		  			<p class="message_system">
+		  				<span class="content">{{=message.content}}</span>
+		  			</p>
+		  		</div>
+		  		{{?? message.type == 'floatjpg'}}
+			  		<div class="message">
+			  			<p class="message_floatjpg">
+			  				<span class="content">{{=message.content}}</span>
+			  			</p>
+			  		</div>
+		  		{{??}}
+
+		  		<div class="message {{? message.author.id == 'me'}}me{{??}}others{{?}}">
+		  			<div class="avatar" data-author-id="{{=message.author.id}}">
+		  				<img src="{{=message.author.avatar}}" alt="{{=message.author.name}}">
+		  			</div>
+		  			<div class="content">
+		  				<p class="author_name">{{=message.author.name}}</p>
+		  				{{? message.type == 'plain'}}
+		  				<div class="bubble {{? message.author.id == 'me'}} bubble_primary right{{??}} bubble_default left{{?}}">
+		  					<div class="bubble_cont">
+		  						<div class="{{=message.type}}">
+		  							<pre>{{=message.content}}</pre>
+		  						</div>
+		  					</div>
+		  				</div>
+		  				{{?? message.type == 'picture'}}
+		  				<div class="bubble {{? message.author.id == 'me'}} right{{??}} left{{?}} bubble_image">
+		  					<div class="bubble_cont">
+		  						<div class="{{=message.type}}">
+		  							{{? message.extra == 'gallery'}}
+		  							<img class="J_galleryShow" data-gallery="1" src="{{=message.content.src}}" data-seq="{{=message.content.seq}}" />
+		  							{{??}}
+		  							<img class="J_img" src="{{=message.content.src}}" />
+		  							{{?}}
+		  						</div>
+		  					</div>
+		  				</div>
+		  				{{?? message.type == 'link'}}
+		  				<div class="bubble {{? message.author.id == 'me'}} right{{??}} left{{?}} bubble_image">
+		  					<div class="bubble_cont">
+		  						<div class="{{=message.type}}">
+		  						    <a href={{=message.content.link}} target="_blank">
+		  								<img class="J_img" src="{{=message.content.poster}}" />
+		  							</a>
+		  						</div>
+		  					</div>
+		  				</div>
+		  				{{?? message.type == 'video'}}
+		  				<div class="bubble {{? message.author.id == 'me'}} right{{??}} left{{?}} bubble_image">
+		  					<div class="bubble_cont">
+		  						<div class="{{=message.type}}"> 
+		  							<!-- <i class="J_fpVideo2"></i> -->
+		  							<img class="J_fpVideo" src="{{=message.content.poster}}" data-src="{{=message.content.video}}" alt="">
+		  						</div>
+		  					</div>
+		  				</div>
+		  				{{?}}
+		  			</div>
+		  		</div>
+		  		{{?}}
+
+		  	</div>
+		  	{{~}}
+		  </script>
+		  <script type="text/javascript">
+		  	
+    		var me = {
+		  		id: 'me', // 写死的，不用改
+		  		name: '' || '我', // 用户昵称
+		  		avatar: '' || 'http://pic9.qiyipic.com/common/20160531/zbs61-me.jpg', // 用户头像图片 url
+		  		
+		  	};
+
+		  </script>
+		<script type="text/javascript" src="http://static.iqiyi.com/js/common/jquery-1.11.3.min.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="http://static.iqiyi.com/js/common/zbsdot.js"></script>
+		<script src="http://static.iqiyi.com/js/common/preloadjs.min.js"></script>   
+		<script src="http://static.iqiyi.com/js/common/easeljs.min.js"></script>
+		<script src="index.js"></script>
+		<script>
+
+		//微信分享
+		    var imgUrl = "http://pic7.qiyipic.com/common/20160531/tongnian.jpg";//分享的图片地址
+		    var lineLink = "http://www.iqiyi.com/news/etjzt.html";//分享的链接
+		    var descContent = '长得很萌的都进来了';//分享的内容
+		    var shareTitle = 'Hey，童年向你捎了句话~';//分享的标题
+		    var appid = '';//可以不填
+		     // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+		    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		        // 发送给好友
+		        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+		            shareFriend();
+		        });
+		        // 分享到朋友圈
+		        WeixinJSBridge.on('menu:share:timeline', function(argv){
+		            shareTimeline();
+		        });
+		    });
+		    function shareFriend() {
+		        WeixinJSBridge.invoke('sendAppMessage',{
+		            "appid": appid,
+		            "img_url": imgUrl,
+		            "img_width": "200",
+		            "img_height": "200",
+		            "link": lineLink,
+		            "desc": descContent,
+		            "title": shareTitle
+		        }, function(res) {
+		            //_report('send_msg', res.err_msg);
+		        })
+		    }
+		    function shareTimeline() {
+		        WeixinJSBridge.invoke('shareTimeline',{
+		            "img_url": imgUrl,
+		            "img_width": "200",
+		            "img_height": "200",
+		            "link": lineLink,
+		            "desc": descContent,
+		            "title": shareTitle
+		        }, function(res) {
+		               //_report('timeline', res.err_msg);
+		        });
+		    }
+		  
+		    
+		</script>
+		</body>
+		
+		</html>
