@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=no">
+	<title>建党95周年</title>
+	<script type="text/javascript" src="http://static.iqiyi.com/js/common/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" href="http://static.iqiyi.com/css/common/zbsjd9509.css">
+	
+ </head>
+<body>
+    <div class="pages">
+        <section class="section section1">
+            <div class="bird"></div>
+            <div class="slogo"></div>
+            <div class="word"></div>
+            <div class="scroDown"></div>
+        </section>
+        <section class="section section2">
+            <a href="#" target="_blank">
+                <div class="coverbg"></div>
+                <div class="mianTitle"></div>
+                <div class="desc"></div>
+                <div class="playBtn"></div>
+            </a>
+            
+            <div class="scroDown"></div>
+        </section>
+        <section class="section section3">
+            <a href="#" target="_blank">
+                <div class="coverbg"></div>
+                <div class="mianTitle"></div>
+                <div class="desc"></div>
+                <div class="playBtn"></div>
+            </a>
+            <div class="scroDown"></div>
+        </section>
+        <section class="section section4">
+            <a href="#" target="_blank">
+                <div class="coverbg"></div>
+                <div class="mianTitle"></div>
+                <div class="desc"></div>
+                <div class="playBtn"></div>
+            </a>
+            <div class="scroDown"></div>
+        </section>
+        <section class="section section5">
+            <a href="#" target="_blank">
+                <div class="coverbg"></div>
+                <div class="mianTitle"></div>
+                <div class="desc"></div>
+                <div class="playBtn"></div>
+            </a>
+            <div class="scroDown"></div>
+        </section>
+        <section class="section section6">
+            <div class="kouhao"></div>
+            <div class="sharejt"></div>
+            <div class="zbslogo"></div>
+        </section>
+    </div>
+</body>
+<script type="text/javascript" src="http://static.iqiyi.com/js/common/zbsjd95.js"></script>
+<script>
+   document.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    });
+var pages = new PageSlide(document.querySelector('.pages'), 'Y', {
+  tranSetionEnd: function() {
+    console.log(this.current);
+  }
+});
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+
+//微信分享
+    var imgUrl = "http://pic7.qiyipic.com/common/20160531/tongnian.jpg";//分享的图片地址
+    var lineLink = "http://www.iqiyi.com/news/etjzt.html";//分享的链接
+    var descContent = '长得很萌的都进来了';//分享的内容
+    var shareTitle = 'Hey，童年向你捎了句话~';//分享的标题
+    var appid = '';//可以不填
+     // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+    });
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            //_report('send_msg', res.err_msg);
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url": imgUrl,
+            "img_width": "200",
+            "img_height": "200",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+               //_report('timeline', res.err_msg);
+        });
+    }
+  
+    
+</script>
+<script type="text/javascript">
+(function(){window.Q=window.Q||{};Q.cookie=Q.cookie||{};Q.cookie.get=function(key){var value=null;var reg=new RegExp("(^| )"+key+"=([^;]*)(;|\x24)"),result=reg.exec(document.cookie);if(result){value=result[2]||""}if('string'==typeof value){value=decodeURIComponent(value);return value}return""};Q.cookie.set=function(key,value,options){options=options||{};value=encodeURIComponent(value);var expires=options.expires;if('number'==typeof options.expires){expires=new Date();expires.setTime(expires.getTime()+options.expires)}document.cookie=key+"="+value+(options.path?"; path="+options.path:"")+(expires?"; expires="+expires.toGMTString():"")+(options.domain?"; domain="+options.domain:"")+(options.secure?"; secure":'')};function get_uid(){var uid=Q.cookie.get('QC006');if(!uid){uid="u"+new Date().getTime();Q.cookie.set("QC006",uid,{expires:365*24*3600*1000,path:'/',domain:'iqiyi.com'})}return uid}function get_weid(){var weid=Q.cookie.get("QC112");if(!weid){weid="weid"+new Date().getTime();Q.cookie.set("QC112",weid,{path:'/',domain:'iqiyi.com'})}return weid}function get_lrfr(){var lrfr=Q.cookie.get('QC007');if(!lrfr){lrfr=document.referrer?document.referrer:"DIRECT"}return lrfr}function get_ppuid(){return JSON.parse(Q.cookie.get("P00002")||"{}").uid||""}function get_msrc(){var m=location.href.match(/msrc=([^=&#]*)/i);return m?m[1]:Q.cookie.get('QC015')}var json={rdm:new Date().getTime(),qtcurl:location.href,rfr:document.referrer,flshuid:get_uid(),lrfr:get_lrfr(),ppuid:get_ppuid(),platform:31,weid:get_weid(),msrc:get_msrc()};var arr=[];for(var i in json){arr.push(encodeURIComponent(i)+"="+encodeURIComponent(json[i]))}var image=new Image();image.src="http://msg.video.qiyi.com/jpb.gif"+'?'+arr.join("&")})();
+</script>
+<!--建党95周年，如何做人物擦现效果-->
+</html>
