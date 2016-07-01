@@ -2,3 +2,11 @@
 https://design.google.com/devices/
 2.浅谈HTML5单页面架构（一）——requirejs + angular + angular-route
 http://www.cnblogs.com/kenkofox/p/4643760.html
+
+//原生JS和Jquery获取touch事件参数
+document.addEventListenner('touchstart',function(e){
+	var px=e.touches[0].pageX
+},false);
+$(document).on('touchstart',function(e){
+	var px=e.originalEvent.changedTouches[0].pageX
+});
